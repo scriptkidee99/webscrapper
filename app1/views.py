@@ -7,12 +7,11 @@ from bs4 import BeautifulSoup
 
 
 def index(request):
+    print('here')
     content = requests.get("https://www.youtube.com/channel/UCWJIPkkittn7HkKlbTwPriQ").content
     soup = BeautifulSoup(content,'html.parser')
-    f = open('content.txt','w')
-    f.write(str(soup))
-    f.close()
     subc = soup.find(class_="yt-subscription-button-subscriber-count-branded-horizontal").get_text()
     print("printing")
     print(subc)
+    #return HttpResponse("Hello World!")
     return render(request,'index.html',{'subsc':subc})
