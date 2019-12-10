@@ -8,7 +8,7 @@ For running this, do the following things first
 
 2. open terminal in the same folder
 
-3. type command - pip install requirments.txt
+3. type command - pip install -r requirments.txt
 
 4. This will install all the requirments for the project
 
